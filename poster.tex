@@ -13,41 +13,30 @@
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+% PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
 \documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
-
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
-
 \usepackage{amsmath} % For typesetting math
 \usepackage{amssymb} % Adds new symbols to be used in math mode
-
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
 \usepackage{palatino} % Use the Palatino font
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
-
 \usepackage{multicol} % Required for multiple columns
 \setlength{\columnsep}{1.5em} % Slightly increase the space between columns
 \setlength{\columnseprule}{0mm} % No horizontal rule between columns
-
 \usepackage{tikz} % Required for flow chart
 \usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart in the template
-
 \newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
 \setlength{\itemsep}{1pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
 }
-
 \definecolor{lightblue}{rgb}{0.145,0.6666,1} % Defines the color used for content box headers
-
 \begin{document}
-
 \begin{poster}
 {
 headerborder=closed, % Adds a border around the header of content boxes
@@ -68,64 +57,46 @@ headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of
 linewidth=2pt % Width of the border lines around content boxes
 }
 %----------------------------------------------------------------------------------------
-%	TITLE SECTION 
+% TITLE SECTION 
 %----------------------------------------------------------------------------------------
 %
 {\includegraphics[height=4em]{logo.png}} % First university/lab logo on the left
-{\bf\textsc{Test Setup using GEM Detectors for the sPHENIX TPC}\vspace{0.5em}} % Poster title
-{\textsc{\{ Gregory Matousec, Benjamin Chase, and Abigail Bishop \} \hspace{12pt} ePHENIX at Stony Brook University}} % Author names and institution
+{\bf\textsc{Unnecessarily Complicated Research Title}\vspace{0.5em}} % Poster title
+{\textsc{\{ John Smith, James Smith and Jane Smith \} \hspace{12pt} University and Department Name}} % Author names and institution
 {\includegraphics[height=4em]{logo.png}} % Second university/lab logo on the right
-
 %----------------------------------------------------------------------------------------
-%	OBJECTIVES
+% OBJECTIVES
 %----------------------------------------------------------------------------------------
-
 \headerbox{Objectives}{name=objectives,column=0,row=0}{
 
-
 }
-
 %----------------------------------------------------------------------------------------
-%	INTRODUCTION
+% INTRODUCTION
 %----------------------------------------------------------------------------------------
-
 \headerbox{Introduction}{name=introduction,column=1,row=0,bottomaligned=objectives}{
 
-
 }
-
 %----------------------------------------------------------------------------------------
-%	RESULTS 1
+% RESULTS 1
 %----------------------------------------------------------------------------------------
-
 
 \headerbox{Results 1}{name=results,column=2,span=2,row=0}{
-
 \begin{multicols}{2}
 \vspace{1em}
-
 
 \end{multicols}
-
 %------------------------------------------------
-
 \begin{multicols}{2}
 \vspace{1em}
-
 
 \begin{center}
-
 \end{center}
-
 \end{multicols}
 }
-
 %----------------------------------------------------------------------------------------
-%	REFERENCES
+% REFERENCES
 %----------------------------------------------------------------------------------------
-
 \headerbox{References}{name=references,column=0,above=bottom}{
-
 
 }@article{ID,
 author = {author},
@@ -166,65 +137,41 @@ OPTurl = {url},
 OPTurldate = {urldate},
 }
 
-
 %----------------------------------------------------------------------------------------
-%	FUTURE RESEARCH
+% FUTURE RESEARCH
 %----------------------------------------------------------------------------------------
-
 \headerbox{Future Research}{name=futureresearch,column=1,span=2,aligned=references,above=bottom}{ % This block is as tall as the references block
-
 \begin{multicols}{2}
-
 \end{multicols}
 }
-
 %----------------------------------------------------------------------------------------
-%	CONTACT INFORMATION
+% CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
-
 \headerbox{Contact Information}{name=contact,column=3,aligned=references,above=bottom}{ % This block is as tall as the references block
 
-
 }
-
 %----------------------------------------------------------------------------------------
-%	CONCLUSION
+% CONCLUSION
 %----------------------------------------------------------------------------------------
-
 \headerbox{Conclusion}{name=conclusion,column=2,span=2,row=0,below=results,above=references}{
-
 \begin{multicols}{2}
-
-
 
 %------------------------------------------------
 
-
-
 \end{multicols}
 }
-
 %----------------------------------------------------------------------------------------
-%	MATERIALS AND METHODS
+% MATERIALS AND METHODS
 %----------------------------------------------------------------------------------------
-
 \headerbox{Materials \& Methods}{name=method,column=0,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
 
-
 }
-
 %----------------------------------------------------------------------------------------
-%	RESULTS 2
+% RESULTS 2
 %----------------------------------------------------------------------------------------
-
 \headerbox{Results 2}{name=results2,column=1,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
 
-
-
 }
-
 %----------------------------------------------------------------------------------------
-
 \end{poster}
-
 \end{document}
