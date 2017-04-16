@@ -21,11 +21,11 @@
 \documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
 
 \usepackage{graphicx} % Required for including images
-\graphicspath{{figures/}} % Directory in which figures are stored
+\graphicspath{{images/}} % Directory in which figures are stored
 
 \usepackage{amsmath} % For typesetting math
 \usepackage{amssymb} % Adds new symbols to be used in math mode
-
+\usepackage{multirow}
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
 \usepackage{palatino} % Use the Palatino font
@@ -51,12 +51,12 @@
 \begin{poster}
 {
 headerborder=closed, % Adds a border around the header of content boxes
-colspacing=1em, % Column spacing
+colspacing=2em, % Column spacing
 bgColorOne=white, % Background color for the gradient on the left side of the poster
 bgColorTwo=white, % Background color for the gradient on the right side of the poster
-borderColor=lightblue, % Border color
+borderColor=gray, % Border color
 headerColorOne=black, % Background color for the header in the content boxes (left side)
-headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerColorTwo=red, % Background color for the header in the content boxes (right side)
 headerFontColor=white, % Text color for the header text in the content boxes
 boxColorOne=white, % Background color of the content boxes
 textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
@@ -65,165 +65,82 @@ headerheight=0.1\textheight, % Height of the header
 headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
 headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
 %textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+columns=5,
 linewidth=2pt % Width of the border lines around content boxes
 }
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 %
-{\includegraphics[height=4em]{logo.png}} % First university/lab logo on the left
-{\bf\textsc{Test Setup using GEM Detectors for the sPHENIX TPC}\vspace{0.5em}} % Poster title
-{\textsc{\{ Gregory Matousec, Benjamin Chase, and Abigail Bishop \} \hspace{12pt} ePHENIX at Stony Brook University}} % Author names and institution
-{\includegraphics[height=4em]{logo.png}} % Second university/lab logo on the right
-
+{}
+%{\includegraphics[height=4em]{Gem1.jpg}} % First university/lab logo on the left
+{\bf\textsc{Unnecessarily Complicated Research Title}\vspace{0.5em}} % Poster title
+{\textsc{\{ John Smith, James Smith and Jane Smith \} \hspace{12pt} University and Department Name}} % Author names and institution
+%{\includegraphics[height=4em]{Gem1.jpg}} % Second university/lab logo on the right
+{}
 %----------------------------------------------------------------------------------------
-%	OBJECTIVES
+%	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\headerbox{Objectives}{name=objectives,column=0,row=0}{
+\headerbox{Abstract}{name=abstract,column=2,span=1,row=0}{
+	\indent The Time Projection Chamber (TPC) of sPHENIX, the new experiment at RHIC / BNL, uses Gas Electron Multiplier (GEM) foils to amplify the ionization signals from charged particles passing through its gas volume. We have assembled a test setup using two GEM foils backed with readout planes inside a small gas volume. We present the status and progress in commissioning and testing the system with directly induced charges and an Iron-55 source.
+	
+	
+}
+%----------------------------------------------------------------------------------------
+% FUTURE RESEARCH
+%----------------------------------------------------------------------------------------
 
+\headerbox{Future Research}{name=future,column=2,span=1,row=0,above=bottom}{
+	\vspace{5em}
+}
+%----------------------------------------------------------------------------------------
+% DIAGRAMS
+%----------------------------------------------------------------------------------------
 
+\headerbox{Diagrams}{name=diagrams,column=2,span=1,row=0,below=abstract,above=future}{
+	
+}
+%----------------------------------------------------------------------------------------
+%	HARDWARE
+%----------------------------------------------------------------------------------------
+
+\headerbox{Hardware}{name=hardware,column=0,span=2,row=0,bottomaligned=diagrams}{
+
+	\begin{tabular}{|p{8cm}|p{3cm}|}
+		
+		 \multirow{2}{*}{
+		 
+	 	}&\includegraphics[width=3cm]{Gem1.jpg}\\&\includegraphics[width=3cm]{Gem2.jpg}\\
+		
+	\end{tabular}
 }
 
 %----------------------------------------------------------------------------------------
-%	INTRODUCTION
+%	SOFTWARE
 %----------------------------------------------------------------------------------------
 
-\headerbox{Introduction}{name=introduction,column=1,row=0,bottomaligned=objectives}{
-
-
-}
-
-%----------------------------------------------------------------------------------------
-%	RESULTS 1
-%----------------------------------------------------------------------------------------
-
-
-\headerbox{Results 1}{name=results,column=2,span=2,row=0}{
-
-\begin{multicols}{2}
-\vspace{1em}
-
-
-\end{multicols}
-
-%------------------------------------------------
-
-\begin{multicols}{2}
-\vspace{1em}
-
-
-\begin{center}
-
-\end{center}
-
-\end{multicols}
-}
-
-%----------------------------------------------------------------------------------------
-%	REFERENCES
-%----------------------------------------------------------------------------------------
-
-\headerbox{References}{name=references,column=0,above=bottom}{
-
-
-}@article{ID,
-author = {author},
-title = {title},
-journaltitle = {journaltitle},
-date = {date},
-OPTtranslator = {translator},
-OPTannotator = {annotator},
-OPTcommentator = {commentator},
-OPTsubtitle = {subtitle},
-OPTtitleaddon = {titleaddon},
-OPTeditor = {editor},
-OPTeditora = {editora},
-OPTeditorb = {editorb},
-OPTeditorc = {editorc},
-OPTjournalsubtitle = {journalsubtitle},
-OPTissuetitle = {issuetitle},
-OPTissuesubtitle = {issuesubtitle},
-OPTlanguage = {language},
-OPToriglanguage = {origlanguage},
-OPTseries = {series},
-OPTvolume = {volume},
-OPTnumber = {number},
-OPTeid = {eid},
-OPTissue = {issue},
-OPTmonth = {month},
-OPTpages = {pages},
-OPTversion = {version},
-OPTnote = {note},
-OPTissn = {issn},
-OPTaddendum = {addendum},
-OPTpubstate = {pubstate},
-OPTdoi = {doi},
-OPTeprint = {eprint},
-OPTeprintclass = {eprintclass},
-OPTeprinttype = {eprinttype},
-OPTurl = {url},
-OPTurldate = {urldate},
+\headerbox{Software}{name=software,column=3,span=2,row=0,bottomaligned=diagrams}{	
 }
 
 
 %----------------------------------------------------------------------------------------
-%	FUTURE RESEARCH
+% CONCLUSION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Future Research}{name=futureresearch,column=1,span=2,aligned=references,above=bottom}{ % This block is as tall as the references block
-
-\begin{multicols}{2}
-
-\end{multicols}
-}
-
-%----------------------------------------------------------------------------------------
-%	CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\headerbox{Contact Information}{name=contact,column=3,aligned=references,above=bottom}{ % This block is as tall as the references block
-
+\headerbox{Conclusion}{name=conclusion,column=0,span=2,row=0,above=bottom,aligned=future}{
 
 }
 
 %----------------------------------------------------------------------------------------
-%	CONCLUSION
+% REFERENCES
 %----------------------------------------------------------------------------------------
 
-\headerbox{Conclusion}{name=conclusion,column=2,span=2,row=0,below=results,above=references}{
-
-\begin{multicols}{2}
-
-
-
-%------------------------------------------------
-
-
-
-\end{multicols}
+\headerbox{References}{name=references,column=3,span=2,row=0,above=bottom,aligned=future}{
+	
 }
 
-%----------------------------------------------------------------------------------------
-%	MATERIALS AND METHODS
-%----------------------------------------------------------------------------------------
 
-\headerbox{Materials \& Methods}{name=method,column=0,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
-
-
-}
-
-%----------------------------------------------------------------------------------------
-%	RESULTS 2
-%----------------------------------------------------------------------------------------
-
-\headerbox{Results 2}{name=results2,column=1,below=objectives,bottomaligned=conclusion}{ % This block's bottom aligns with the bottom of the conclusion block
-
-
-
-}
-
-%----------------------------------------------------------------------------------------
 
 \end{poster}
 
