@@ -25,7 +25,7 @@
 
 \usepackage{amsmath} % For typesetting math
 \usepackage{amssymb} % Adds new symbols to be used in math mode
-
+\usepackage{multirow}
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
 \usepackage{palatino} % Use the Palatino font
@@ -72,11 +72,25 @@ linewidth=2pt % Width of the border lines around content boxes
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 %
-
-{\includegraphics[height=4em]{logo.png}} % First university/lab logo on the left
+{}
+%{\includegraphics[height=4em]{Gem1.jpg}} % First university/lab logo on the left
 {\bf\textsc{Unnecessarily Complicated Research Title}\vspace{0.5em}} % Poster title
 {\textsc{\{ John Smith, James Smith and Jane Smith \} \hspace{12pt} University and Department Name}} % Author names and institution
-{\includegraphics[height=4em]{logo.png}} % Second university/lab logo on the right
+%{\includegraphics[height=4em]{Gem1.jpg}} % Second university/lab logo on the right
+{}
+%----------------------------------------------------------------------------------------
+%	GEMS
+%----------------------------------------------------------------------------------------
+
+\headerbox{Gas Electron Multipliers (GEMs)}{name=gems,column=0,span=2,row=0}{
+	\begin{paragraph}
+		\indent Gas Electron Multipliers can be used to massively multiply an incoming flow of electrons for better detection. The GEMs we are using consist of a foil permeated by a high density of holes, which are stacked in layers of 1-3. Below the GEM foils lies a readout plane that is composed of a grid of wires responsible for recording the data associated with the incoming electrons. A voltage is applied to the foils but is broken up by a series of voltage dividers in such a way that each plate receives a fraction of the voltage. The voltage is distributed such that each successive plate has more voltage than the last so that in each gap between plates there exists an electric field. The magnitude of an electric field is dependent on potential difference, hence its existence stemming from the potential difference between each foil. This electric field is responsible for the multiplication of electrons as the initial current moves through the foils and subsequently through the generated electric field. \\
+	\end{paragraph}
+	\includegraphics[width=12cm]{Gem4.png}\\
+	\begin{paragraph}
+		\indent Picture (1) is a sample of the GEM foils we are using. They are relatively paper thin, perforated with holes nearly too small to see with the human eye, and have a reflective surface. Pictures (5) and (6) display the readout plane and voltage dividers that are used along with the GEM foils. As seen in picture (5), the readout plane is a layout of wires connected in a geometric pattern; in this case they are arranged hexagonally. Pictures (3) and (4) are samples of the entire apparatus that includes the gas volume, GEM foil(s), readout plane and voltage dividers. The gas is distributed into the volume via the small device on the far right of picture (4), for example. Once the gas fills the volume, the particle can then be directed into the volume which will ionize the gas and the emitted electrons will flow through the GEM foil(s) and into the readout plane. For our setup we only expect to use 1-3 layers of the GEM foils. 
+	\end{paragraph}
+}
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
@@ -91,7 +105,7 @@ linewidth=2pt % Width of the border lines around content boxes
 % FUTURE RESEARCH
 %----------------------------------------------------------------------------------------
 
-\headerbox{Future Research}{name=future,column=2,span=1,row=0,above=bottom}{
+\headerbox{Future Research}{name=future,column=2,span=1,row=0,below=gems,above=bottom}{
 	\vspace{5em}
 }
 %----------------------------------------------------------------------------------------
@@ -101,33 +115,28 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Diagrams}{name=diagrams,column=2,span=1,row=0,below=abstract,above=future}{
 	
 }
+
+
 %----------------------------------------------------------------------------------------
 %	HARDWARE
 %----------------------------------------------------------------------------------------
 
-\headerbox{Hardware}{name=hardware,column=0,span=2,row=0,bottomaligned=diagrams}{
-
-			\textbf{\huge{GEM}}
-
-	\setlength{\tabcolsep}{12pt}
-	\begin{tabular}{p{8cm}|p{2.5cm}}
-		PARAGRAPH & \multirow{2}{*}{2}\\
-	\end{tabular}
+\headerbox{Hardware}{name=hardware,column=3,span=2,row=0}{	
+\vspace{30em}
 }
 
 %----------------------------------------------------------------------------------------
 %	SOFTWARE
 %----------------------------------------------------------------------------------------
 
-\headerbox{Software}{name=software,column=3,span=2,row=0,bottomaligned=diagrams}{	
+\headerbox{Software}{name=software,column=3,span=2,row=0,below=hardware,above=future}{	
 }
-
 
 %----------------------------------------------------------------------------------------
 % CONCLUSION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Conclusion}{name=conclusion,column=0,span=2,row=0,above=bottom,aligned=future}{
+\headerbox{Conclusion}{name=conclusion,column=0,span=2,row=0,below=gems,above=bottom}{
 
 }
 
